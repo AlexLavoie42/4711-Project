@@ -27,6 +27,6 @@ function deleteUser(id) {
 module.exports = {
     add : addUser,
     getall : getAllUsers,
-    getartist: getUser,
+    getuser: getUser,
     delete: deleteUser
 }

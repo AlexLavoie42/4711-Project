@@ -24,6 +24,6 @@ function deleteConversation(id) {
 module.exports = {
     add : addConversation,
     getall : getAllConversations,
-    getartist: getConversation,
+    getconversation: getConversation,
     delete: deleteConversation
 }

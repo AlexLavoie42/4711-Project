@@ -25,6 +25,6 @@ function deletePost(id) {
 module.exports = {
     add : addPost,
     getall : getAllPosts,
-    getartist: getPost,
+    getpost: getPost,
     delete: deletePost
 }

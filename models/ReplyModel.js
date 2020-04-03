@@ -24,6 +24,6 @@ function deleteReply(id) {
 module.exports = {
     add : addReply,
     getall : getAllReplies,
-    getartist: getReply,
+    getreply: getReply,
     delete: deleteReply
 }

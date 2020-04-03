@@ -23,6 +23,6 @@ function deleteMessage(id) {
 module.exports = {
     add : addMessage,
     getall : getAllMessages,
-    getartist: getMessage,
+    getmessage: getMessage,
     delete: deleteMessage
 }

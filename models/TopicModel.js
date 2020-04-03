@@ -24,6 +24,6 @@ function deleteTopic(id) {
 module.exports = {
     add : addTopic,
     getall : getAllTopics,
-    getartist: getTopic,
+    gettopic: getTopic,
     delete: deleteTopic
 }
