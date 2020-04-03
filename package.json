@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/AlexLavoie42/4711-Project#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.1",
+    "handlebars": "^4.7.5"
   }
 }
