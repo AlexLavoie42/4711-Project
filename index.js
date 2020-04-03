@@ -53,4 +53,16 @@ app.get('/home', function (req, res) {
     });
 });
 
+app.get('/edit-profile', function (req, res) {
+    res.render('EditProfileView', {
+        pageTitle: 'PetBase: Edit Profile',
+        style: 'editProfileView.css',
+        fname: 'Bobby',
+        lname: 'Jackson',
+        dpURL: 'https://randomuser.me/api/portraits/med/men/95.jpg',
+        userBio: 'I have a 2 year old pembroke welsh corgi!',
+        country: 'Canada'
+    });
+});
+
 app.listen(8000, () => console.log('Server ready'))
