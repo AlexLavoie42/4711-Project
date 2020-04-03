@@ -1,0 +1,20 @@
+#content {
+    margin-top: 50px;
+}
+
+#message {
+    margin: 50px;
+}
+
+#registrationForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#bioTA {
+    resize: none;
+}
+
+#compRegBtn {
+    margin-top: 25px;
+}
