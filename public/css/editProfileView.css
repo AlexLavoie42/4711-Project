@@ -1,0 +1,37 @@
+/* HEADER START */
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#logoutBtnContainer {
+    display: flex;
+}
+
+#logoutBtn {
+    align-self: center;
+}
+
+#content {
+    margin-top: 50px;
+}
+
+#editProfileForm {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+#bioTA {
+    resize: none;
+}
+
+#saveChangesBtn {
+    margin-top: 25px;
+}
+
+img {
+    max-width: 100%;
+    max-height: auto;
+    border-radius: 10%;
+}

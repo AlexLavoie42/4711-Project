@@ -1,0 +1,49 @@
+<header>
+
+    <div id="logo">
+        <h1>Pet<span class="text-info">Base</span></h1>
+    </div>
+
+    <div id="logoutBtnContainer">
+        <button type="submit" class="btn btn-info" id="logoutBtn">Log Out</button>
+    </div>
+
+</header>
+
+<div id="content">
+
+    <div id="editProfileField" class="col-sm-6">
+
+        <h1>Edit Profile</h1>
+
+        <form action="/" id="editProfileForm">
+
+            <label for="fname">Change First Name</label>
+            <input type="text" name="fname" placeholder="{{fname}}"/>
+
+            <label for="lname">Change Last Name</label>
+            <input type="text" name="lname" placeholder="{{lname}}"/>
+
+            <label for="dp">Change Display Picture</label>
+            <input type="text" name="dp" placeholder="{{dpURL}}"/>
+
+            <label for="bio">Change Profile Bio</label>
+            <textarea rows="6" name="bio" placeholder="{{userBio}}" id="bioTA"></textarea>
+
+            <label for="country">Change Country</label>
+            <input type="text" name="country" placeholder="{{country}}"/>
+
+            <label for="dob">Change Birthdate</label>
+            <input type="date" name="dob"/>
+
+            <button type="submit" id="saveChangesBtn" class="btn btn-info">Save Changes</button>
+
+        </form>
+
+    </div>
+
+    <div class="col-sm-6">
+        <img src="imgs/cat.png" alt="Cute Cat"/>
+    </div>
+
+</div>
