@@ -2,11 +2,11 @@ let db = require('../util/database');
 
 // Add a single individual to the database
 function addUser(data) {
-    let sql = `Insert into users (name, email, first_name, last_name, password, image_url, desc,
-                country, birthdate, post_count, message_count, like_count)
+    let sql = `Insert into users (email, first_name, last_name, password, image_url, desc,
+                country, birthdate)
                  values ('${data.name}', '${data.email}', '${data.first_name}', '${data.last_name}'
                  , '${data.password}', '${data.image_url}', '${data.desc}', '${data.country}'
-                 , '${data.birthdate}', '${data.post_count}', '${data.message_count}', '${data.like_count}')`;
+                 , '${data.birthdate}')`;
     db.execute(sql);
 }
 
