@@ -1,0 +1,36 @@
+header {
+    display: flex;
+    flex-direction: row;
+}
+
+.logInField {
+    display: flex;
+    margin-left: auto;
+    order: 2;
+}
+
+#logInContent {
+    align-self: flex-end;
+}
+
+#content {
+    margin-top: 50px;
+}
+
+img {
+    max-width: 100%;
+    max-height: auto;
+}
+
+#message {
+    margin-bottom: 30px;
+}
+
+#signUpForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#signUpBtn {
+    margin-top: 25px;
+}
