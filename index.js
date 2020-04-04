@@ -53,6 +53,7 @@ app.get('/home', function (req, res) {
     });
 });
 
+// Edit Profile
 app.get('/edit-profile', function (req, res) {
     res.render('EditProfileView', {
         pageTitle: 'PetBase: Edit Profile',
@@ -64,5 +65,14 @@ app.get('/edit-profile', function (req, res) {
         country: 'Canada'
     });
 });
+
+// Messages
+app.get('/messages', function (req, res) {
+    res.render('MessageView', {
+        pageTitle: 'PetBase: Messages',
+        style: 'messageView.css'
+    });
+});
+
 
 app.listen(8000, () => console.log('Server ready'))
