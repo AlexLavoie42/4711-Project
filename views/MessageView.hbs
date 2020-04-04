@@ -1,0 +1,87 @@
+<header>
+
+    <div id="logo">
+        <h1>Pet<span class="text-info">Base</span></h1>
+    </div>
+
+    <div id="topSearchContainer">
+        <input id="topSearchBar" type="text" placeholder="Search...">
+    </div>
+
+    <div id="logoutBtnContainer">
+        <button type="submit" class="btn btn-info" id="logoutBtn">Log Out</button>
+    </div>
+
+</header>
+
+<div id="content">
+
+    <div id="msgListContainer" class="col-sm-4">
+
+        <div class="msgCardContainer">
+
+            <div class="msgCard">
+
+                <div class="msgDpContainer">
+                    <img class="msgDp" src="https://randomuser.me/api/portraits/med/men/27.jpg" alt="Display Picture"/>
+                </div>
+
+                <div class="msgNameSubject">
+
+                    <div class="msgName">
+                        <h4>Jake Statefarm</h4>
+                    </div>
+
+                    <div class="msgSubject">
+                        <p class="subject">Dog Shedding Hella!</p>
+                    </div>
+
+                </div>
+
+                <div class="msgDate">
+                    <p>Sept 10</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="msgViewContainer" class="col-sm-8">
+
+        <div id="msgBoard">
+
+            <div class="msgSentCard">
+
+                <div class="msgSentDpContainer">
+                    <img class="msgSentDp" src="https://randomuser.me/api/portraits/med/men/27.jpg" alt="Display Picture"/>
+                </div>
+
+                <div class="msgContentContainer">
+
+                    <div class="nameTimeContainer">
+                        <p class="senderName">Jake Statefarm</p>
+                        <p class="timeSent"><i>Sept 10, 2020 7:44 pm</i></p>
+                    </div>
+
+                    <div class="msgContent">
+                        <p class="msg">Does your dog shed as much as my dog?</p>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="textAreaContainer">
+            <form action="/" id="sendMsgForm">
+                <textarea rows="6" id="msgTA" placeholder="Write a message..." required></textarea>
+                <button type="submit" id="sendMsgBtn" class="btn btn-info">Send</button>
+            </form>
+        </div>
+
+    </div>
+
+</div>

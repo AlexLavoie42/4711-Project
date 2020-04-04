@@ -1,0 +1,138 @@
+/* HEADER START */
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#topSearchContainer {
+    display: flex;
+    order: 2;
+}
+
+#topSearchBar {
+    align-self: center;
+    width: 300px;
+    height: 35px;
+    font-size: 12pt;
+}
+
+#logoutBtnContainer {
+    display: flex;
+    order: 3
+}
+
+#logoutBtn {
+    align-self: center;
+}
+
+/* CONTENT */
+#content {
+    margin-top: 50px;
+    height: 750px;
+}
+
+/* MESSAGE LIST */
+#msgListContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.msgCardContainer:hover {
+    background: lightgray;
+    cursor: pointer;
+}
+
+.msgCard {
+    display: flex;
+    margin: 10px;
+}
+
+.msgDpContainer {
+    display: flex;
+    justify-content: center;
+    width: 25%;
+}
+
+.msgDp {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    order: 1;
+}
+
+.msgNameSubject {
+    margin-left: 15px;
+    width: 55%;
+}
+
+.msgDate {
+    align-self: center;
+    margin-left: 10px;
+    width: 20%;
+}
+
+/* MESSAGE VIEW : RIGHT SIDE */
+#msgViewContainer {
+    height: 100%;
+}
+
+#msgBoard {
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    border: 1px solid black;
+}
+
+.msgSentCard {
+    display: flex;
+    margin: 20px;
+}
+
+.msgSentDpContainer {
+    width: 20%;
+}
+
+.msgSentDp {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.msgContentContainer {
+    width: 80%;
+}
+
+.nameTimeContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.senderName {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* TEXT AREA */
+
+#textAreaContainer {
+    height: 30%;
+    margin-top: 10px;
+}
+
+#sendMsgForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#msgTA {
+    resize: none;
+}
+
+#sendMsgBtn {
+    margin-top: 10px;
+}
+
+
