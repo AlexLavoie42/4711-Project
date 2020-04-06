@@ -24,12 +24,12 @@
             <div id="userInfo">
 
                 <div id="dpContainer">
-                    <img id="dp" src="{{dpURL}}" alt="Display Picture"/>
+                    <img id="dp" src="{{user.image_url}}" alt="Display Picture"/>
                 </div>
                 
                 <div id="nameBioContainer">
-                    <h3 id="userName">{{fname}} {{lname}}</h3>
-                    <p id="bio"><i>{{userBio}}</i></p>
+                    <h3 id="userName">{{user.first_name}} {{user.last_name}}</h3>
+                    <p id="bio"><i>{{user.desc}}</i></p>
                 </div>
 
             </div>
@@ -38,17 +38,17 @@
                 <table id="userStats" cellspacing="10"> 
                     <tr>
                         <td><a href="/">Posts</a></td>
-                        <td>{{numPosts}}</td>
+                        <td>{{user.numPosts}}</td>
                     </tr>
 
                     <tr>
                         <td><a href="/">Messages</a></td>
-                        <td>{{numMessages}}</td>
+                        <td>{{user.numMessages}}</td>
                     </tr>
 
                     <tr>
                         <td>Likes</td>
-                        <td>{{numLikes}}</td>
+                        <td>{{user.numLikes}}</td>
                     </tr>
                 </table>
             </div>

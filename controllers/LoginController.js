@@ -6,9 +6,8 @@ exports.login = (req, res) => {
     let password = req.body.password;
     let user = userModel.getemail(email);
     user.then((rows, err) => {
-        console.log(rows[0])
         if(rows[0][0]['password'] === password){
-            req.session.user = rows[0];
+            req.session.user = rows[0][0];
             res.redirect('/home')
         } else {
             res.redirect('/')
