@@ -1,7 +1,12 @@
 let userModel = require('../models/UserModel');
 
 exports.editProfile = (req, res) => {
+    let image = req.body.dp;
+    let bio = req.body.bio;
+    let country = req.body.country;
+    let dob = req.body.dob;
 
+    res.redirect("/home")
 };
 
 exports.getProfile = (req, res) => {

@@ -1,5 +1,7 @@
 create schema projectdb collate utf8mb4_0900_ai_ci;
 
+use projectdb;
+
 create table topics
 (
 	id int auto_increment

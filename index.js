@@ -1,4 +1,7 @@
-    let express = require('express');
+let express = require('express');
+
+let bodyParser = require('body-parser');
+let session = require('express-session');
 let app = express();
 
 const expHbs = require('express-handlebars');
@@ -15,12 +18,16 @@ app.engine(
 );
 app.set('view engine', 'hbs');
 app.set('views', 'views');
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(session({
+    secret: "SuperSecretKey"
+}));
 
 let loginRoutes = require('./routes/Login');
-let messageRoutes = require('./routes/Login');
-let postRoutes = require('./routes/Login');
-let profileRoutes = require('./routes/Login');
-let searchRoutes = require('./routes/Login');
+let messageRoutes = require('./routes/Message');
+let postRoutes = require('./routes/Post');
+let profileRoutes = require('./routes/Profile');
+let searchRoutes = require('./routes/Search');
 
 
 // Landing Page
@@ -33,23 +40,27 @@ app.get('/', function (req, res) {
 
 // Home Page
 app.get('/home', function (req, res) {
-    res.render('HomeView', {
-        pageTitle: 'PetBase: Home',
-        style: 'homeView.css',
-        dpURL: 'https://randomuser.me/api/portraits/med/men/95.jpg',
-        fname: 'Bobby',
-        lname: 'Jackson',
-        userBio: 'I have a 2 year old pembroke welsh corgi!',
-        numPosts: 5,
-        numMessages: 8,
-        numLikes: 29,
-        postDpURL: 'https://randomuser.me/api/portraits/med/men/32.jpg',
-        postSubject1: 'Why does my corgi drool so much?',
-        postTopic1: 'Dog',
-        postPreview1: 'blah blah blah',
-        postDate1: 'April 5, 2020',
-        numPostReplies1: '6'
-    });
+    if(req.session.user) {
+        res.render('HomeView', {
+            pageTitle: 'PetBase: Home',
+            style: 'homeView.css',
+            dpURL: 'https://randomuser.me/api/portraits/med/men/95.jpg',
+            fname: 'Bobby',
+            lname: 'Jackson',
+            userBio: 'I have a 2 year old pembroke welsh corgi!',
+            numPosts: 5,
+            numMessages: 8,
+            numLikes: 29,
+            postDpURL: 'https://randomuser.me/api/portraits/med/men/32.jpg',
+            postSubject1: 'Why does my corgi drool so much?',
+            postTopic1: 'Dog',
+            postPreview1: 'blah blah blah',
+            postDate1: 'April 5, 2020',
+            numPostReplies1: '6'
+        });
+    } else {
+        res.redirect('/')
+    }
 });
 
 app.use(loginRoutes);
