@@ -6,6 +6,8 @@ exports.editProfile = (req, res) => {
     let country = req.body.country;
     let dob = req.body.dob;
 
+    userModel.edit(req.session.user.id, {image_url: image, desc: bio, country: country, birthdate: dob})
+
     res.redirect("/home")
 };
 

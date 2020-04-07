@@ -8,6 +8,4 @@ router.get('/edit-profile', (req, res) => res.render("EditProfileView"));
 
 router.post('/edit-profile', profileController.editProfile);
 
-router.get('/create-profile', profileController.editProfile);
-
 module.exports = router;

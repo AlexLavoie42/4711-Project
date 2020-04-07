@@ -9,8 +9,8 @@ function addUser(data) {
 }
 
 function editUser(id, data) {
-    db.execute(`UPDATE users SET (image_url = ${data.image_url}, \`desc\` = ${data.desc}, 
-                                    country = ${data.country}, birthdate = ${data.birthdate}) where id="${id}"`)
+    db.execute(`UPDATE users SET image_url = '${data.image_url}', \`desc\` = '${data.desc}', 
+                                    country = '${data.country}', birthdate = '${data.birthdate}' where id="${id}"`)
 }
 
 // Gets all the individuals in the database
