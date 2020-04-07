@@ -4,7 +4,7 @@ const router = express.Router();
 
 router.get('/profile/:id', profileController.getProfile);
 
-router.get('/edit-profile', (req, res) => res.render("EditProfileView"));
+router.get('/edit-profile', (req, res) => res.render("EditProfileView", {style: "editProfileView.css"}));
 
 router.post('/edit-profile', profileController.editProfile);
 

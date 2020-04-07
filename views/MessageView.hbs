@@ -19,7 +19,7 @@
     <div id="msgListContainer" class="col-sm-4">
 
         <div class="msgCardContainer">
-
+            {{#each messages}}
             <div class="msgCard">
 
                 <div class="msgDpContainer">
@@ -33,7 +33,7 @@
                     </div>
 
                     <div class="msgSubject">
-                        <p class="subject">Dog Shedding Hella!</p>
+                        <p class="subject">{{subject}}</p>
                     </div>
 
                 </div>
@@ -43,6 +43,7 @@
                 </div>
 
             </div>
+            {{/each}}
 
         </div>
 

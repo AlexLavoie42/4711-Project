@@ -6,15 +6,15 @@ exports.editProfile = (req, res) => {
     let country = req.body.country;
     let dob = req.body.dob;
 
-    userModel.edit(req.session.user.id, {image_url: image, desc: bio, country: country, birthdate: dob})
+    userModel.edit(req.session.user.id, {image_url: image, desc: bio, country: country, birthdate: dob});
 
     res.redirect("/home")
 };
 
 exports.getProfile = (req, res) => {
-    profile = userModel.getuser(req.params['id']);
+    let profile = userModel.getuser(req.params['id']);
     profile.then((rows, err) => {
-        res.render('ProfileView', rows[0])
+        res.render('ProfileView', {user: rows[0][0], style: "profileView.css"})
     });
 };
 

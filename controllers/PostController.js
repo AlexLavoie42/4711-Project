@@ -1,7 +1,7 @@
 let postModel = require('../models/PostModel');
 
 exports.getAllPosts = (req, res) => {
-    let Posts = postModel.getAll();
+    let Posts = postModel.getall();
     Posts.then( ([rows, fieldData]) => {
         res.render('posts', { post: rows, postsCSS: true });
     });
@@ -9,7 +9,7 @@ exports.getAllPosts = (req, res) => {
 };
 
 exports.getPost = (req, res) => {
-    let Posts = postModel.getPost(req.params['id']);
+    let Posts = postModel.getpost(req.params['id']);
     Posts.then( ([rows, fieldData]) => {
         res.render('posts', { post: rows, postsCSS: true });
     });
@@ -25,17 +25,19 @@ exports.deletePost = (req, res) => {
 };
 
 exports.addPost = (req, res) => {
-    let p_name = req.body.name;
-    let p_about = req.body.about;
-    let p_imageURL = req.body.imageURL;
+    let p_name = req.body.subject;
+    let p_about = req.body.details;
+    let p_created = new Date();
+    p_created = p_created.toISOString().split('T')[0]+' ' + p_created.toTimeString().split(' ')[0];
 
     let pOject = {
-        name: p_name,
-        about: p_about,
-        imageURL: p_imageURL
+        subject: p_name,
+        body: p_about,
+        post_date: p_created,
+        user_id: req.session.user.id
     }
 
-    peopleModel.add(pOject);
+    postModel.add(pOject);
     res.redirect(301, '/peoples');
 };
 

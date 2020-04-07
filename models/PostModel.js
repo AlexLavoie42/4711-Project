@@ -2,8 +2,8 @@ let db = require('../util/database');
 
 // Add a single individual to the database
 function addPost(data) {
-    let sql = `Insert into posts (subject, body, post_date, topic_id, user_id) values
-                ('${data.subject}', '${data.body}','${data.post_date}', '${data.topic_id}'
+    let sql = `Insert into posts (subject, body, post_date, user_id) values
+                ('${data.subject}', '${data.body}','${data.post_date}'
                 ,'${data.user_id}')`;
     db.execute(sql);
 }

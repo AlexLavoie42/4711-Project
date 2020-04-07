@@ -28,7 +28,7 @@
                 </div>
                 
                 <div id="nameBioContainer">
-                    <h3 id="userName">{{user.first_name}} {{user.last_name}}</h3>
+                    <h3 id="userName"><a href="/profile/{{user.id}}" >{{user.first_name}} {{user.last_name}}</a></h3>
                     <p id="bio"><i>{{user.desc}}</i></p>
                 </div>
 
@@ -42,7 +42,7 @@
                     </tr>
 
                     <tr>
-                        <td><a href="/">Messages</a></td>
+                        <td><a href="/messages">Messages</a></td>
                         <td>{{user.numMessages}}</td>
                     </tr>
 
@@ -68,7 +68,7 @@
 
             {{!-- Post Submission --}}
             <div id="submissionContainer">
-                <form action="/" id="submission">
+                <form method="post" action="/add-post" id="submission">
 
                     <h4>Have a question? Ask!</h4>
 
@@ -121,31 +121,23 @@
 
                     <div class="postCard">
 
-                        <div class="postDpContainer">
-                            <img class="postDp" src="{{postDpURL}}" alt="Post User Display Picture"/>
-                        </div>
-
                         <div class="postInfoContainer">
 
                             <div class="subjectTopicContainer">
 
                                 <div class="subjectContainer">
-                                    <h4 class="postSubject">{{postSubject1}}</h4>
-                                </div>
-
-                                <div class="topicContainer">
-                                    <h5 class="postTopic text-info">{{postTopic1}}</h5>
+                                    <h4 class="postSubject">{{post.subject}}</h4>
                                 </div>
                             </div>
 
                             <div class="postPreviewContainer">
-                                <p class="postPreview">{{postPreview1}}</p>
+                                <p class="postPreview">{{post.body}}</p>
                             </div>
 
                             <div class="dateRepliesContainer">
-                                <p class="postDate">{{postDate1}}</p>
+                                <p class="postDate">{{post.post_date}}</p>
 
-                                <a href="/" class="postReplies">Replies {{numPostReplies1}}</a>
+                                <a href="/" class="postReplies">Replies {{post.reply_count}}</a>
                             </div>
 
                         </div>

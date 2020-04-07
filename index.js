@@ -38,19 +38,19 @@ app.get('/', function (req, res) {
     });
 });
 
+let postModel = require("./models/PostModel");
 // Home Page
 app.get('/home', function (req, res) {
     if(req.session.user) {
-        res.render('HomeView', {
-            pageTitle: 'PetBase: Home',
-            style: 'homeView.css',
-            user: req.session.user,
-            postDpURL: 'https://randomuser.me/api/portraits/med/men/32.jpg',
-            postSubject1: 'Why does my corgi drool so much?',
-            postTopic1: 'Dog',
-            postPreview1: 'blah blah blah',
-            postDate1: 'April 5, 2020',
-            numPostReplies1: '6'
+        posts = postModel.getall();
+        posts.then((rows, err) => {
+            res.render('HomeView', {
+                pageTitle: 'PetBase: Home',
+                style: 'homeView.css',
+                user: req.session.user,
+                postDpURL: 'https://randomuser.me/api/portraits/med/men/32.jpg',
+                post: rows[0][rows[0].length-1]
+            });
         });
     } else {
         res.redirect('/')
