@@ -1,0 +1,115 @@
+<header>
+
+    <div id="logo">
+        <h1>Pet<span class="text-info">Base</span></h1>
+    </div>
+
+    <div id="topSearchContainer">
+        <input id="topSearchBar" type="text" placeholder="Search...">
+    </div>
+
+    <div id="logoutBtnContainer">
+        <button type="submit" class="btn btn-info" id="logoutBtn">Log Out</button>
+    </div>
+
+</header>
+
+<div id="content">
+
+    {{!-- Left side: User Profile --}}
+    <div id="left" class="col-sm-4">
+
+        <div id="profile">
+
+            <div id="userInfo">
+
+                <div id="dpContainer">
+                    <img id="dp" src="{{dpURL}}" alt="Display Picture"/>
+                </div>
+
+                <div id="nameBioContainer">
+                    <h3 id="userName">{{fname}} {{lname}}</h3>
+                    <h4 id="country">{{country}}</h4>
+                    <p id="bio"><i>{{userBio}}</i></p>
+                </div>
+
+
+            </div>
+
+            <div id="userStatsContainer">
+                <table id="userStats" cellspacing="10">
+                    <tr>
+                        <td>Posts</td>
+                        <td>{{numPosts}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Likes</td>
+                        <td>{{numLikes}}</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="messageBtnContainer">
+                <button type="button" class="btn btn-info" id="messageBtn">Message</button>
+                <button type="button" class="btn btn-info" id="likeBtn">Like</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    {{!-- Right side: Posts --}}
+    <div id="right" class="col-sm-8">
+
+        <div id="posts">
+
+            {{!-- All posts by person --}}
+            <div id="allPostsContainer">
+
+                <h2>All Posts by {{fname}}</h2>
+
+                <div id="postsContainer">
+
+                    <div class="postCard">
+
+                        <div class="postDpContainer">
+                            <img class="postDp" src="{{postDpURL}}" alt="Post User Display Picture"/>
+                        </div>
+
+                        <div class="postInfoContainer">
+
+                            <div class="subjectTopicContainer">
+
+                                <div class="subjectContainer">
+                                    <h4 class="postSubject">{{postSubject1}}</h4>
+                                </div>
+
+                                <div class="topicContainer">
+                                    <h5 class="postTopic text-info">{{postTopic1}}</h5>
+                                </div>
+                            </div>
+
+                            <div class="postPreviewContainer">
+                                <p class="postPreview">{{postPreview1}}</p>
+                            </div>
+
+                            <div class="dateRepliesContainer">
+                                <p class="postDate">{{postDate1}}</p>
+
+                                <a href="/" class="postReplies">Replies {{numPostReplies1}}</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
