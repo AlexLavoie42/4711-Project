@@ -79,4 +79,4 @@ app.use(profileRoutes);
 app.use(searchRoutes);
 
 
-app.listen(8000, () => console.log('Server ready'))
+app.listen(process.env.PORT || 8000, () => console.log('Server ready'))
