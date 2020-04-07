@@ -18,8 +18,8 @@ exports.getProfile = (req, res) => {
 
 exports.createProfile = (req, res) => {
     let email = req.body.email;
-    let f_name = req.body.first_name;
-    let l_name = req.body.last_name;
+    let f_name = req.body.fname;
+    let l_name = req.body.lname;
     let pass = req.body.password;
     let image = req.body.dp;
     let bio = req.body.bio;

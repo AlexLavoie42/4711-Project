@@ -14,7 +14,7 @@ function getAllMessages() {
 
 // Gets a specific individual from the database
 function getMessage(id) {
-    return db.execute("Select * from messages where id = " + id);
+    return db.execute("Select * from messages where conversation_id_fk = " + id);
 }
 
 function deleteMessage(id) {

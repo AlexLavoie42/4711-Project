@@ -6,6 +6,6 @@ router.get('/messages/:id', messageController.getMessage);
 
 router.get('/messages', messageController.getAllMessages);
 
-router.post('/send-message', messageController.sendMessage);
+router.post('/send-message/:id', messageController.sendMessage);
 
 module.exports = router;
