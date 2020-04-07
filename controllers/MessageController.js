@@ -41,7 +41,6 @@ exports.startConversation = (req, res) => {
     let user = req.session.user.id;
     let messaged = req.body.id;
     let m_created = new Date();
-    m_created = m_created.toISOString().split('T')[0]+' ' + p_created.toTimeString().split(' ')[0];
     conversationModel.add({subject: "", user1: user, user2: messaged});
     res.redirect('/messages')
 };
@@ -49,6 +48,8 @@ exports.startConversation = (req, res) => {
 exports.sendMessage = (req, res) => {
     let id = req.params['id'];
     let message = req.body.message;
-    messageModel.add({id: id, message: message, style: "messageView.css"})
+    let m_created = new Date();
+    m_created = m_created.toISOString().split('T')[0]+' ' + m_created.toTimeString().split(' ')[0];
+    messageModel.add({id: id, message: message, timestamp: m_created});
     res.redirect('/messages/'+id)
 };
