@@ -1,0 +1,27 @@
+<div id="right" class="col-sm-8">
+
+    <div id="posts">
+
+        {{!-- Post Submission --}}
+        <div id="submissionContainer">
+            <form action="/" id="submission">
+
+                <h4>Have a question? Ask!</h4>
+
+                <label for="subject">Subject</label>
+                <input type="text" name="subject" placeholder="Ex: What cat eat" required/>
+
+                <label for="details">Details</label>
+                <textarea rows="10" name="details" placeholder="explain in detail..." required></textarea>
+
+                <label for="petType">Pet Type</label>
+                <select id="petType">
+                    <option value="dog">Dog</option>
+                    <option value="fish">Fish</option>
+                    <option value="cat">Bird</option>
+                </select>
+
+                <button type="submit" class="btn btn-info" id="submitPostBtn">Post to Timeline</button>
+
+            </form>
+        </div>

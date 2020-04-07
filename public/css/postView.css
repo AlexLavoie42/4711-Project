@@ -1,0 +1,133 @@
+/* HEADER START */
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#topSearchContainer {
+    display: flex;
+    order: 2;
+}
+
+#topSearchBar {
+    align-self: center;
+    width: 300px;
+    height: 35px;
+    font-size: 12pt;
+}
+
+#logoutBtnContainer {
+    display: flex;
+    order: 3
+}
+
+#logoutBtn {
+    align-self: center;
+}
+
+#content {
+    margin-top: 50px;
+}
+
+/* USER PROFILE : LEFT */
+#profile {
+    margin: 20px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+}
+
+#nameBioContainer {
+    margin: 0 auto;
+}
+
+#userName {
+    text-align: center;
+    margin: 20px;
+}
+
+#bio {
+    text-align: center;
+}
+
+#userStats {
+    margin: 20px auto;
+
+}
+
+td {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+
+#editProfileBtnContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* POSTS : RIGHT */
+
+/* POST SUBMISSION */
+#submissionContainer {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+#submission {
+    display: flex;
+    flex-direction: column;
+}
+
+#submitPostBtn {
+    margin-top: 15px;
+}
+
+/* TOPIC SEARCH */
+#topicSearchContainer {
+    margin: 20px;
+}
+
+#petTypeSearch {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 150px;
+}
+
+/* LATEST DISCUSSIONS */
+#latestDiscussionsContainer {
+    margin: 20px;
+}
+
+#postsContainer {
+    margin-top: 30px;
+}
+
+.postCard {
+    display: flex;
+}
+
+.subjectTopicContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.postDpContainer {
+    width: 30%;
+}
+
+.postInfoContainer {
+    width: 70%;
+}
+
+.dateRepliesContainer {
+    display: flex;
+    justify-content: space-between;
+}
