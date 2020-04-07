@@ -2,7 +2,8 @@ let db = require('../util/database');
 
 // Add a single individual to the database
 function addMessage(data) {
-    let sql = `Insert into messages (message, timestamp) values ('${data.message}', '${data.timestamp}')`;
+    let sql = `Insert into messages (message, timestamp, conversation_id_fk) values ('${data.message}', '${data.timestamp}, ' ||
+ '              ${data.id}')`;
     db.execute(sql);
 }
 
