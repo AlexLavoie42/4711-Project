@@ -18,7 +18,7 @@ function getConversation(id) {
 }
 
 function getUserConversations(user) {
-    return db.execute(`Select * from conversations where user1_id = ${user}` );
+    return db.execute(`Select * from conversations where user1_id = ${user} or user2_id = ${user}` );
 }
 
 function deleteConversation(id) {

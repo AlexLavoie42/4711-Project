@@ -4,6 +4,8 @@ const router = express.Router();
 
 router.get('/post/:id', postController.getPost);
 
+router.get('/posts', postController.getAllPosts);
+
 router.get('/post/:id/send-reply', postController.sendReply);
 
 router.get('/edit-post/:id', postController.editPost);

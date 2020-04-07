@@ -3,7 +3,7 @@ let postModel = require('../models/PostModel');
 exports.getAllPosts = (req, res) => {
     let Posts = postModel.getall();
     Posts.then( ([rows, fieldData]) => {
-        res.render('posts', { post: rows, postsCSS: true });
+        res.render('PostView', { posts: rows, style: "postView.css" });
     });
 
 };
@@ -11,7 +11,7 @@ exports.getAllPosts = (req, res) => {
 exports.getPost = (req, res) => {
     let Posts = postModel.getpost(req.params['id']);
     Posts.then( ([rows, fieldData]) => {
-        res.render('posts', { post: rows, postsCSS: true });
+        res.render('posts', { post: rows, style: "postView.css" });
     });
 
 };

@@ -10,7 +10,7 @@ exports.getMessage = (req, res) => {
         let messages = rows[0];
         convos.then((rows, err) => {
             convos = rows[0];
-            let user = userModel.getuser(convos[0]['id']);
+            let user = userModel.getuser(convos[0]['user1_id']);
             user.then((rows, err) => {
                 user = rows[0];
                 for(c in convos){
