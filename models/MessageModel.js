@@ -2,7 +2,7 @@ let db = require('../util/database');
 
 // Add a single individual to the database
 function addMessage(data) {
-    let sql = `Insert into messages (message, timestamp, conversation_id_fk) values ('${data.message}', '${data.timestamp}, ' ||
+    let sql = `Insert into messages (message, timestamp, conversation_id) values ('${data.message}', '${data.timestamp}, ' ||
  '              ${data.id}')`;
     db.execute(sql);
 }
@@ -14,7 +14,7 @@ function getAllMessages() {
 
 // Gets a specific individual from the database
 function getMessage(id) {
-    return db.execute("Select * from messages where conversation_id_fk = " + id);
+    return db.execute("Select * from messages where conversation_id = " + id);
 }
 
 function deleteMessage(id) {
