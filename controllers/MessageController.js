@@ -16,8 +16,16 @@ exports.getAllMessages = (req, res) => {
     })
 };
 
+exports.startConversation = (req, res) => {
+    let user = req.session.user.id;
+    let messaged = req.body.id;
+    conversationModel.add({subject: "", user1: user, user2: messaged})
+    res.redirect('/messages')
+};
+
 exports.sendMessage = (req, res) => {
     let id = req.params['id'];
     let message = req.body.message;
     messageModel.add({id: id, message: message, style: "messageView.css"})
+    res.redirect('/messages/'+id)
 };

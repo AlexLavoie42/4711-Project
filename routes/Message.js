@@ -6,6 +6,8 @@ router.get('/messages/:id', messageController.getMessage);
 
 router.get('/messages', messageController.getAllMessages);
 
+router.post('/start-message', messageController.startConversation);
+
 router.post('/send-message/:id', messageController.sendMessage);
 
 module.exports = router;
