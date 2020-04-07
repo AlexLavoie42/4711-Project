@@ -51,8 +51,10 @@
             </div>
 
             <div id="messageBtnContainer">
-                <button type="button" onclick="fetch('/start-message', {method: 'POST', body: JSON.stringify({id: {{user.id}} })})"
-                class="btn btn-info" id="messageBtn">Message</button>
+                <form method="post" action="/start-message">
+                    <input type="submit" class="btn btn-info" id="messageBtn" value="Message">
+                    <input type="hidden" name="id" value="{{user.id}}">
+                </form>
                 <button type="button" class="btn btn-info" id="likeBtn">Like</button>
             </div>
 

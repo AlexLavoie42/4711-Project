@@ -17,19 +17,20 @@
 <div id="content">
 
     <div id="msgListContainer" class="col-sm-4">
+        {{#each messages}}
 
         <div class="msgCardContainer">
-            {{#each messages}}
+            <a href="/messages/{{id}}">
             <div class="msgCard">
 
                 <div class="msgDpContainer">
-                    <img class="msgDp" src="https://randomuser.me/api/portraits/med/men/27.jpg" alt="Display Picture"/>
+                    <img class="msgDp" src="{{image_url}}" alt="Display Picture"/>
                 </div>
 
                 <div class="msgNameSubject">
 
                     <div class="msgName">
-                        <h4>Jake Statefarm</h4>
+                        <h4>{{first_name}} {{last_name}}</h4>
                     </div>
 
                     <div class="msgSubject">
@@ -43,46 +44,45 @@
                 </div>
 
             </div>
-            {{/each}}
+            </a>
 
         </div>
+        {{/each}}
 
     </div>
-
+    {{#if user}}
     <div id="msgViewContainer" class="col-sm-8">
 
         <div id="msgBoard">
 
             <div class="msgSentCard">
-
-                <div class="msgSentDpContainer">
-                    <img class="msgSentDp" src="https://randomuser.me/api/portraits/med/men/27.jpg" alt="Display Picture"/>
-                </div>
-
+                {{#each message}}
                 <div class="msgContentContainer">
 
                     <div class="nameTimeContainer">
-                        <p class="senderName">Jake Statefarm</p>
-                        <p class="timeSent"><i>Sept 10, 2020 7:44 pm</i></p>
+                        <p class="senderName">{{user.first_name}} {{user.last_name}}</p>
+                        <p class="timeSent"><i>{{timestamp}}</i></p>
                     </div>
 
                     <div class="msgContent">
-                        <p class="msg">Does your dog shed as much as my dog?</p>
+                        <p class="msg">{{message}}</p>
                     </div>
                     
                 </div>
+                {{/each}}
 
             </div>
 
         </div>
 
         <div id="textAreaContainer">
-            <form action="/" id="sendMsgForm">
-                <textarea rows="6" id="msgTA" placeholder="Write a message..." required></textarea>
+            <form method="post" action="/send-message/{{id}}" id="sendMsgForm">
+                <textarea rows="6" name="message" id="msgTA" placeholder="Write a message..." required></textarea>
                 <button type="submit" id="sendMsgBtn" class="btn btn-info">Send</button>
             </form>
         </div>
 
     </div>
+    {{/if}}
 
 </div>
