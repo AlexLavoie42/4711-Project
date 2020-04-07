@@ -1,8 +1,10 @@
 <header>
 
-    <div id="logo">
-        <h1>Pet<span class="text-info">Base</span></h1>
-    </div>
+    <a href="/">
+        <div id="logo">
+            <h1>Pet<span class="text-info">Base</span></h1>
+        </div>
+    </a>
 
     <div id="topSearchContainer">
         <input id="topSearchBar" type="text" placeholder="Search...">
@@ -118,33 +120,40 @@
                 <h4>Latest Discussions</h4>
 
                 <div id="postsContainer">
-
+                    {{#each posts}}
                     <div class="postCard">
+
+                        <div class="postDpContainer">
+                            <img class="postDp" src="{{image_url}}" alt="Post User Display Picture"/>
+                        </div>
+                        <a href="/profile/{{user_id}}">{{first_name}} {{last_name}}</a>
 
                         <div class="postInfoContainer">
 
                             <div class="subjectTopicContainer">
 
                                 <div class="subjectContainer">
-                                    <h4 class="postSubject">{{post.subject}}</h4>
+                                    <h4 class="postSubject">{{subject}}</h4>
                                 </div>
                             </div>
 
                             <div class="postPreviewContainer">
-                                <p class="postPreview">{{post.body}}</p>
+                                <p class="postPreview">{{body}}</p>
                             </div>
 
                             <div class="dateRepliesContainer">
-                                <p class="postDate">{{post.post_date}}</p>
+                                <p class="postDate">{{post_date}}</p>
 
-                                <a href="/" class="postReplies">Replies {{post.reply_count}}</a>
+                                <a href="/" class="postReplies">Replies {{reply_count}}</a>
                             </div>
 
                         </div>
 
                     </div>
+                    {{/each}}
 
                 </div>
+
 
             </div>
 

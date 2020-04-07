@@ -1,15 +1,16 @@
 <header>
-
+    <a href="/">
     <div id="logo">
         <h1>Pet<span class="text-info">Base</span></h1>
     </div>
+    </a>
 
     <div id="topSearchContainer">
         <input id="topSearchBar" type="text" placeholder="Search...">
     </div>
 
     <div id="logoutBtnContainer">
-        <button type="submit" class="btn btn-info" id="logoutBtn">Log Out</button>
+        <button type="submit" class="btn btn-info" id="logoutBtn" onclick="window.location = '/logout'">Log Out</button>
     </div>
 
 </header>
@@ -54,9 +55,8 @@
     <div id="msgViewContainer" class="col-sm-8">
 
         <div id="msgBoard">
-
+            {{#each message}}
             <div class="msgSentCard">
-                {{#each message}}
                 <div class="msgContentContainer">
 
                     <div class="nameTimeContainer">
@@ -69,9 +69,9 @@
                     </div>
                     
                 </div>
-                {{/each}}
 
             </div>
+            {{/each}}
 
         </div>
 

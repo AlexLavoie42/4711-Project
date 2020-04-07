@@ -38,7 +38,7 @@ exports.addPost = (req, res) => {
     }
 
     postModel.add(pOject);
-    res.redirect(301, '/peoples');
+    res.redirect(301, '/');
 };
 
 exports.sendReply = (req, res) => {
