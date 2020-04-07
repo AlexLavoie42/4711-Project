@@ -2,7 +2,7 @@ let db = require('../util/database');
 
 // Add a single individual to the database
 function addReply(data) {
-    let sql = `Insert into reply (body, post_id_fk, user_id_fk) values
+    let sql = `Insert into reply (body, post_id, user_id) values
                 ('${data.body}', '${data.post_id}','${data.user_id}')`;
     db.execute(sql);
 }

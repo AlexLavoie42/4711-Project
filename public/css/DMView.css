@@ -1,0 +1,52 @@
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#topSearchContainer {
+    display: flex;
+    order: 2;
+}
+
+#topSearchBar {
+    align-self: center;
+    width: 300px;
+    height: 35px;
+    font-size: 12pt;
+}
+
+#logoutBtnContainer {
+    display: flex;
+    order: 3
+}
+
+#logoutBtn {
+    align-self: center;
+}
+
+#content {
+  margin-top:10%;
+}
+
+img {
+    float: left;
+    margin-right: 10px;
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+}
+
+#msgSubject {
+    width: 30%;
+}
+
+#msgBody {
+    width: 30%;
+    height: 30%;
+    margin-top: 8px;
+}
+
+
+#msgBtn {
+    margin-top: 8px;
+}

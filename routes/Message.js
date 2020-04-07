@@ -4,6 +4,8 @@ const router = express.Router();
 
 router.get('/messages/:id', messageController.getMessage);
 
-router.post('/send-message', messageController.sendMessage);
+router.get('/messages', messageController.getAllMessages);
+
+router.post('/send-message/:id', messageController.sendMessage);
 
 module.exports = router;
